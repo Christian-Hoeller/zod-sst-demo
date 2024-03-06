@@ -1,5 +1,5 @@
 {
-  "name": "zod-sst-demo",
+  "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
   "version": "0.1.0",
   "scripts": {
