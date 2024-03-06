@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -29,6 +29,9 @@
     "zod": "^3.22.4",
     "yaml": "^2.4.1",
     "@asteasolutions/zod-to-openapi": "^6.4.0"
+  },
+  "exports": {
+    "types": "./dist/types"
   },
   "contributors": [
     {
