@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -11,8 +11,8 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "generate": "ts-node utils/generator.ts",
-    "build-for-package": "npm run generate && rimraf ./dist && tsc -p tsconfig.local.json",
-    "build": "npm run generate && rimraf ./dist && tsc",
+    "build": "npm run generate && rimraf ./dist && tsc -p tsconfig.local.json",
+    "build-for-package": "npm run generate && rimraf ./dist && tsc",
     "prepublish": "npm run build"
   },
   "publishConfig": {
@@ -20,6 +20,18 @@
   },
   "peerDependencies": {
     "zod": "^3.22.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./typings": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

@@ -79,7 +79,7 @@ async function generateTypingIndex() {
     );
 
     // check if the src/typing directory exists and create it if it doesn't
-    const typingDirectoryPath = join(__dirname, '../src/typing');
+    const typingDirectoryPath = join(__dirname, '../src/typings');
     
     try {
         await fs.access(typingDirectoryPath);
