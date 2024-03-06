@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -15,6 +15,9 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "exports": {
+    "types": "./dist/types"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
