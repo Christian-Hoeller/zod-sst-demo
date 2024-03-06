@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Demo API
+  description: Demo API for OpenAPI documentation
+servers:
+  - url: v1
+components:
+  schemas:
+    Sport:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          maxLength: 50
+          description: Name of the sport
+          example: Basketball
+        players:
+          type: number
+          minimum: 0
+          maximum: 50
+          description: Number of players in the sport
+          example: 10
+        equipment:
+          type: array
+          items:
+            type: string
+          description: Equipment used in the sport
+          example:
+            - ball
+            - net
+      required:
+        - name
+        - players
+        - equipment
+    User:
+      type: object
+      properties:
+        first_name:
+          type: string
+          minLength: 2
+          maxLength: 50
+          description: first name of the user
+          example: Moritz
+        last_name:
+          type: string
+          minLength: 2
+          maxLength: 50
+          description: last name of the user
+          example: Hiebl
+        age:
+          type: number
+          minimum: 0
+          maximum: 150
+          description: Participants relation
+          example: 23
+        sport:
+          type: array
+          items: {}
+          description: Participants relation
+      required:
+        - first_name
+        - last_name
+        - age
+        - sport
+  parameters: {}
+paths: {}
