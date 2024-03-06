@@ -1,5 +1,5 @@
 node_modules
 dist
 
-src/types
-src/**/index.ts
+src/types/
+src/schemas/index.ts
