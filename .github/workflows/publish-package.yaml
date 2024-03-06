@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build-dist
+        run: npm run build-for-package
 
       - name: Publish to GitHub Packages
         run: npm publish

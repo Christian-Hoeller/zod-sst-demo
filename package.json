@@ -12,7 +12,7 @@
     "dev": "nodemon src/index.ts",
     "generate": "ts-node utils/generator.ts",
     "build": "npm run generate && rimraf ./dist && tsc -p tsconfig.local.json",
-    "build-dist": "npm run generate && rimraf ./dist && tsc",
+    "build-for-package": "npm run generate && rimraf ./dist && tsc",
     "prepublish": "npm run build"
   },
   "publishConfig": {
