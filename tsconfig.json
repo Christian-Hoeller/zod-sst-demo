@@ -10,9 +10,8 @@
 
     /* Emit */
     "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-    "declarationMap": true,
-    "emitDeclarationOnly": false,                      /* Only output d.ts files and not JavaScript files. */
-    "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
+    "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+    "outDir": "./",                                   /* Specify an output folder for all emitted files. */
     "removeComments": true,                           /* Disable emitting comments. */
     "noEmit": false,                                   /* Disable emitting files from a compilation. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
