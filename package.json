@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -25,7 +25,11 @@
     "zod": "^3.22.4"
   },
   "exports": {
-    "./types": "./dist/models/types/index.js"
+    "./types": "./dist/types/index.d.ts",
+    "./schemas": "./dist/schemas/index.js",
+    "./models": "./dist/models/index.js",
+    "./api": "./dist/request/index.js",
+    "./messages": "./dist/messages/index.js"
   },
   "contributors": [
     {
