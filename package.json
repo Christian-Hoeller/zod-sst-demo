@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -28,9 +28,9 @@
       "types": "./dist/index.d.ts"
     },
     "./typings": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/typings/index.js",
+      "require": "./dist/typings/index.js",
+      "types": "./dist/typings/index.d.ts"
     }
   },
   "devDependencies": {

@@ -4,12 +4,14 @@
     "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
+    "module": "NodeNext",                                /* Specify what module code is generated. */
+    "moduleResolution": "NodeNext",                      /* Specify how TypeScript looks up a file from a given module specifier. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
 
     /* Emit */
     "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-    "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+    "declarationMap": true,
+    "emitDeclarationOnly": false,                      /* Only output d.ts files and not JavaScript files. */
     "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
     "removeComments": true,                           /* Disable emitting comments. */
     "noEmit": false,                                   /* Disable emitting files from a compilation. */
