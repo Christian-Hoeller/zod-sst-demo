@@ -19,19 +19,26 @@ This repository contains the types for the Full-Stack TypeScript project. It is 
   - `Events`
   - `Logs`
 
-## Types
+## Usage
 
-### `User`
+To use this structure and the generator within, the project must have the following structure:
 
-The `User` type represents a user in the system.
-
-```typescript
-interface User {
-  id: string;
-  first_name: string;
-  last_name: string;
-  email: string;
-  age: number;
-  hobbies: string[];
-}
+```plaintext
+src/
+  types/
+    api/
+      <type>.[request|response|validator].ts
+    db/
+      <name>.db.ts
+    schemas/
+      <name>.schema.ts
+    types/
+      (generated)
+    messaging/
+      errors/
+        <type>.ts
+      events/
+        <type>.ts
+      logs/
+        <type>.ts
 ```
