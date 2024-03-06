@@ -1,5 +1,6 @@
-const testFunction = () => {
+export const testFunction = () => {
   console.log("hello world");
 };
 
-testFunction();
+
+export default testFunction;

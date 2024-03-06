@@ -1,7 +1,7 @@
 {
-  "name": "@Christian-Hoeller/zod-sst-demo",
+  "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
