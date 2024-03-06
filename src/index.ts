@@ -12,4 +12,4 @@ export const testFunction = () => {
 
 };
 
-export default testFunction;
+export { Schemas, Types };
