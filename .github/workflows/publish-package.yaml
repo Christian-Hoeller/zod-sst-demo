@@ -26,9 +26,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Move Folders
-        run: rm -rf src && rm README.md && rm tsconfig.json && mv dist/* ./ && rm -rf dist
-
       - name: Publish to GitHub Packages
         run: npm publish
         env:
