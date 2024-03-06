@@ -18,19 +18,21 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "exports": {
-    "api": "./dist/api",
-    "db": "./dist/db",
-    "messages": "./dist/messages",
-    "schemas": "./dist/schema",
-    "types": "./dist/types"
+    "api": "./dist/api/index.d.ts",
+    "db": "./dist/db/index.d.ts",
+    "messages": "./dist/messages/index.d.ts",
+    "schemas": "./dist/schema/index.d.ts",
+    "types": "./dist/types/index.d.ts"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "mongoose-zod": "^0.1.2",
     "nodemon": "^3.1.0",
     "rimraf": "^5.0.5",
-    "ts-node": "^10.9.2",
-    "zod": "^3.22.4"
+    "ts-node": "^10.9.2"
   },
   "contributors": [
     {
