@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -10,11 +10,19 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "rimraf ./dist && tsc",
+    "generate": "ts-node utils/generator.ts",
+    "build": "npm run generate && rimraf ./dist && tsc",
     "prepublish": "npm run build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "exports": {
+    "api": "./dist/api.js",
+    "db": "./dist/db.js",
+    "messages": "./dist/messages.js",
+    "schemas": "./dist/schema.js",
+    "types": "./dist/types.ts"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
