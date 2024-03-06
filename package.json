@@ -2,7 +2,10 @@
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
   "version": "0.1.1",
-  "repository": "https://github.com/christian-hoeller/zod-sst-demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
+  },
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "rimraf ./dist && tsc",
