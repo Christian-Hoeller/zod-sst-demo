@@ -1,7 +1,7 @@
 {
   "name": "@christian-hoeller/zod-sst-demo",
   "author": "Christian-Hoeller",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-hoeller/zod-sst-demo.git"
@@ -24,13 +24,6 @@
     "ts-node": "^10.9.2",
     "zod": "^3.22.4"
   },
-  "exports": {
-    "./types": "./dist/types/index.d.ts",
-    "./schemas": "./dist/schemas/index.js",
-    "./models": "./dist/models/index.js",
-    "./api": "./dist/request/index.js",
-    "./messages": "./dist/messages/index.js"
-  },
   "contributors": [
     {
       "name": "sevsev9",
@@ -45,5 +38,8 @@
       "name": "GitHub Copilot",
       "url": "https://github.com/features/copilot"
     }
+  ],
+  "files": [
+    "*.d.ts"
   ]
 }
