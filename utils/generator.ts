@@ -5,7 +5,7 @@ const schemaDirectoryPath = join(__dirname, '../src/schemas');
 
 (async () => {
     await generateSchemaIndex();
-    await generateTypesIndex();
+    await generateTypingIndex();
 })();
 
 async function generateSchemaIndex() {
@@ -45,7 +45,7 @@ async function generateSchemaIndex() {
     console.log('Wrote to schemas/index.ts\n');
 }
 
-async function generateTypesIndex() {
+async function generateTypingIndex() {
     const lines = [
         `import { z } from "zod";\n`
     ];
@@ -78,25 +78,25 @@ async function generateTypesIndex() {
         ...schemaNames.map(name => `export type ${name} = z.infer<typeof ${name}Schema>;\n`)
     );
 
-    // check if the src/types directory exists and create it if it doesn't
-    const typesDirectoryPath = join(__dirname, '../src/types');
+    // check if the src/typing directory exists and create it if it doesn't
+    const typingDirectoryPath = join(__dirname, '../src/typing');
     
     try {
-        await fs.access(typesDirectoryPath);
+        await fs.access(typingDirectoryPath);
     } catch (e) {
-        await fs.mkdir(typesDirectoryPath);
+        await fs.mkdir(typingDirectoryPath);
     }
 
     try {
-        await fs.access(join(typesDirectoryPath, 'index.ts'));
-        await fs.unlink(join(typesDirectoryPath, 'index.ts'));
-        console.log('Deleted types/index.ts.');
+        await fs.access(join(typingDirectoryPath, 'index.ts'));
+        await fs.unlink(join(typingDirectoryPath, 'index.ts'));
+        console.log('Deleted typing/index.ts.');
     } catch (e) {
         console.log("Didn\'t delete index.ts because it doesn\'t exist.");
     }
 
-    // write the file to the src/types directory
-    await fs.writeFile(join(typesDirectoryPath, 'index.ts'), lines.join(''));
+    // write the file to the src/typing directory
+    await fs.writeFile(join(typingDirectoryPath, 'index.ts'), lines.join(''));
 
-    console.log('Writing to types/index.ts');
+    console.log('Writing to typing/index.ts');
 }
